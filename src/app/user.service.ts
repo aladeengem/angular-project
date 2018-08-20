@@ -3,16 +3,21 @@ import { User } from './user';
 import { Users } from './user.mock';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { HttpClient } from '@angular/common/http';
+import { HttpHeaders } from '@angular/common/http';
 
 
 @Injectable()
 export class UserService {
 
-  constructor() { }
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
-  register(user: User): void{
-    Users.push(user);
-    console.log(Users);
+  constructor(private http: HttpClient) { }
+
+  register(user: User): Observable<any>{
+    return this.http.post('/users/register', user, this.httpOptions);
 
   }
 
