@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300');
+@import url('https://fonts.googleapis.com/css?family=Oxygen:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:700');
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+
+    .register{
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: center;
+        position: block;
+        height: auto;
+        width: 500px;
+        padding: 40px 40px;
+        background-color: white;
+        text-align: center;
+        margin: 20px 0 20px 0;
+        border-radius: 10px;
+    }
+
+    @mixin template($color){
+        border:none;
+        background-color: $color;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        background-size: 1cm;
+    }
+
+    #fb{
+        background: url(../../assets/images/fb1.png) no-repeat top center;
+        @include template(#3b5998);
+    }
+
+    #gmail{ 
+        background: url(../../assets/images/gmail.png) no-repeat top center;
+        @include template(rgb(221, 76, 63));  
+    }
+
+    h2{
+        float: left;
+    }
+
+    form{
+        margin-top: .5in;
+        position: relative;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #input-email, #input-password, #input-name, #input-address{
+        position: relative; 
+    }
+
+    .fa-email, .fa-lock, .fa-user, .fa-map{
+        top: 5px;
+        left: 15px;
+        color: rgb(75, 201, 169);
+        position: absolute;
+    }
+
+    #email, #password, #name, #address{
+        
+        width: 80%;
+        height: .8cm;
+        border-bottom-color: whitesmoke;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 30px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        
+
+    }
+
+    button{
+        width: 4cm;
+        height: 1cm;
+        border: none;
+    }
+
+    .submit{
+        width: 4cm;
+        height: 1cm;
+        position: relative;
+        float: left;
+        margin-top: 15px;
+        margin-left: 50px;
+        background-color:  rgb(75, 201, 169);
+        color: white;
+        border-radius: 5px;
+        border:none;
+        font-family: 'Arvo', serif;
+        font-size: 14px;
+    }
+
+    p{
+        margin-top: 10px;
+        margin-left: 50px; 
+        justify-self: left;
+        font-size: 12px;
+        font-family: 'Oxygen', sans-serif;
+        color: gray;
+    }
+    
+
+    strong:hover{
+        font-size: 14px;
+        color: rgb(75, 201, 169);
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px){
+        
+        .register{
+            position: relative;
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+        .fa-email, .fa-lock, .fa-user, .fa-map{
+            top: 5px;
+            left: 2px;
+            color: rgb(75, 201, 169);
+            position: absolute;
+        }
+        form{
+            margin-top: .5in;
+        }
+
+        .submit{
+            float: left;
+            margin-left: 20px;
+        }
+        p{
+            margin-top: 20px;
+            margin-left: 20px; 
+            justify-self: left;
+            font-size: 12px;
+            font-family: 'Oxygen', sans-serif;
+            color: gray;
+        }
+        
+
+    }
+
+    @media screen and (max-width: 320px){
+
+        .fa-email, .fa-lock, .fa-user, .fa-map{
+            top: 5px;
+            left: 0px;
+            color: rgb(75, 201, 169);
+            position: absolute;
+        }
+
+        .register{
+            position: relative;
+            width: 250px;
+            height: auto;
+            padding: 20px 10px;
+        }
+        .submit{
+            font-size: 12px;
+            width: 120px;
+            margin-top: 5px;
+            margin-left: 7px;
+        }
+        p{
+            margin-left: 7px;
+            font-size: 10px;
+      
+        }
+    
+    }
+
+
+
+}

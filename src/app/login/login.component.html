@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="login">
+        <input type="image" id="facebook" src="../../assets/images/facebook.png" width="30px" height="30px"/>
+        <input type="image" id="google" src="../../assets/images/google.png" width="30px" height="30px"/>
+        <form action="post">
+          <div id="input-email">
+              <span class="fa-email"><fa-icon class="fa-lg" [icon]="faEnvelope"></fa-icon></span>
+              <input type="email" id="email" name="email" placeholder=" Email">
+          </div>
+          <div id="input-password">
+              <span class="fa-lock"><fa-icon class="fa-lg" [icon]="faLock"></fa-icon></span>
+              <input type="password" id="password" name="password" placeholder=" Password">
+          </div>
+          <button class="submit" type="submit">Sign-in</button>
+          <p>Don't have an account? <strong routerLink="/register">Sign-up.</strong></p>
+        </form>
+     
+      </div>
+</div>

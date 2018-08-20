@@ -1,0 +1,28 @@
+<div class= "wrapper">
+  <div class="register">
+     <h1 style="color: rgb(80, 76, 76); text-align: center; margin-bottom: 1cm; font-family: 'Noto Sans', sans-serif;">Sign-up</h1> 
+    <button type="submit" id="fb"></button> 
+    <button type="submit" id="gmail"></button> 
+    <form action="post">
+      <div id="input-email">
+          <span class="fa-email"><fa-icon class="fa-lg" [icon]="faEnvelope"></fa-icon></span>
+          <input type="email" [(ngModel)]="user.email" id="email" name="email" placeholder=" Email"/>
+      </div>
+      <div id="input-password">
+          <span class="fa-lock"><fa-icon class="fa-lg" [icon]="faLock"></fa-icon></span>
+          <input type="password" [(ngModel)]="user.password" id="password" name="password" placeholder=" Password"/>
+      </div>
+      <div id="input-name">
+          <span class="fa-user"><fa-icon class="fa-lg" [icon]="faUser"></fa-icon></span>
+          <input type="text" [(ngModel)]="user.name" id="name" name="name" placeholder=" Name"/>
+      </div>
+      <div id="input-address">
+          <span class="fa-map"><fa-icon class="fa-lg" [icon]="faMapMarkedAlt"></fa-icon></span>
+          <input type="text" [(ngModel)]="user.address" id="address" name="address" placeholder=" Address"/>
+      </div>
+      <button class="submit" (click)="register(user)" type="submit">Create my account</button>
+      <p>Already have an account? <strong routerLink="/login">Sign-in.</strong></p>
+    </form>
+ 
+  </div>
+</div>
