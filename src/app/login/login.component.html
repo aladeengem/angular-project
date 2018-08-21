@@ -11,7 +11,7 @@
               <span class="fa-lock"><fa-icon class="fa-lg" [icon]="faLock"></fa-icon></span>
               <input type="password" id="password" name="password" placeholder=" Password">
           </div>
-          <button class="submit" type="submit">Sign-in</button>
+          <button class="submit" type="submit" (mouseover)="hover=true" (mouseleave)="hover=false" [ngStyle]="{backgroundColor: hover == true ? 'gray' : none}">Sign-in</button>
           <p>Don't have an account? <strong routerLink="/register">Sign-up.</strong></p>
         </form>
      

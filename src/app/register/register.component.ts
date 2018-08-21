@@ -29,7 +29,11 @@ export class RegisterComponent implements OnInit {
   }
 
   register(user: User): void{
-   this.userService.register(user);
+   this.userService.register(user)
+       .subscribe(res => {
+         console.log(res);
+       })
+    ;
   }
 
 }

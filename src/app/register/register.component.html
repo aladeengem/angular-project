@@ -20,7 +20,7 @@
           <span class="fa-map"><fa-icon class="fa-lg" [icon]="faMapMarkedAlt"></fa-icon></span>
           <input type="text" [(ngModel)]="user.address" id="address" name="address" placeholder=" Address"/>
       </div>
-      <button class="submit" (click)="register(user)" type="submit">Create my account</button>
+      <button class="submit" (click)="register(user)" type="submit" (mouseover)="hover=true" (mouseleave)="hover=false" [ngStyle]="{backgroundColor: hover == true ? 'gray' : none}">Create my account</button>
       <p>Already have an account? <strong routerLink="/login">Sign-in.</strong></p>
     </form>
  
